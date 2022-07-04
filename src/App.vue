@@ -1,6 +1,6 @@
 <template>
-  <v-app>
-    <v-app-bar app color="primary" dark>
+  <v-app id="main">
+    <v-app-bar app color="black-lighter" dark>
       <div class="d-flex align-center">
         <v-img
           alt="Vuetify Logo"
@@ -33,17 +33,19 @@
       </v-btn>
     </v-app-bar>
 
-    <v-main> </v-main>
+    <v-main></v-main>
   </v-app>
 </template>
+
+<style lang="scss">
+@import url("./styles/index.scss");
+</style>
 
 <script>
 export default {
   name: "App",
 
-  components: {
-    HelloWorld,
-  },
+  components: {},
 
   data: () => ({
     //
