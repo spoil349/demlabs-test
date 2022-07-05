@@ -2,6 +2,9 @@ const black = Object.freeze({
   main: "#1C1C1E",
   lighter: "#2C2C2E",
 });
+const gray = Object.freeze({
+  main: "#6C6C6C",
+});
 const white = Object.freeze({
   main: "#EEEEEE",
 });
@@ -16,6 +19,7 @@ const green = Object.freeze({
 });
 export default Object.freeze({
   black,
+  gray,
   white,
   red,
   yellow,

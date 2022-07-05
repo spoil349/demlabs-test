@@ -1,6 +1,12 @@
+$gray: #6c6c6c;
+$light-gray: #474747;
+$white: #eeeeee;
+$black: #1c1c1e;
+
 $body-font-family: "Poppins", serif;
 $border-radius-root: 16px;
-
+$text-field-outlined-fieldset-border: 1px solid $light-gray !important;
 $material-light: (
   "background": #1c1c1e,
 );
+$text-field-enclosed-details-padding: 0 16px;

@@ -1,3 +1,36 @@
+.text-h7 {
+  font-size: 1.125rem !important;
+}
+
+.z-3 {
+  z-index: 3;
+}
+
+.gray--border {
+  border-color: $gray !important;
+}
+
 .v-navigation-drawer__border {
-  background-color: #474747 !important;
+  background-color: $light-gray !important;
+}
+
+.theme--light.v-divider {
+  border-color: $light-gray !important;
+}
+
+.black-main-hover:hover {
+  background: $black !important;
+}
+
+.v-data-table--fixed-header > .v-data-table__wrapper > table > thead > tr > th {
+  border-bottom: 1px solid $gray !important;
+}
+
+.custom-scroll {
+  & *::-webkit-scrollbar {
+    width: 4px;
+  }
+  & *::-webkit-scrollbar-thumb {
+    background: $gray;
+  }
 }

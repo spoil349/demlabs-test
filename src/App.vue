@@ -19,24 +19,20 @@
       </v-navigation-drawer>
       <div class="d-flex flex-column flex-grow-1">
         <v-app-bar flat color="black-lighter" class="flex-grow-0"></v-app-bar>
-        <div class="px-6 py-4">
-          <v-main> </v-main>
-        </div>
+        <v-main class="px-6 py-4">
+          <ServersMapDashboardBlock />
+        </v-main>
       </div>
     </div>
   </v-app>
 </template>
 
-<style lang="scss">
-@import url("./styles/index.scss");
-</style>
-
 <script>
-// import
+import ServersMapDashboardBlock from "./components/ServersMapDashboardBlock.vue";
 export default {
   name: "App",
 
-  components: {},
+  components: { ServersMapDashboardBlock },
 
   data: () => ({
     //
