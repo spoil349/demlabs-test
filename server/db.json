@@ -1,4 +1,96 @@
 {
+  "servers": [
+    {
+      "id": 1,
+      "status": "ok",
+      "name": "server1",
+      "latitude": "9%",
+      "longitude": "9%",
+      "users_id": [1, 2, 3, 4],
+      "uptime": "2011-10-05T14:48:00.000Z"
+    },
+    {
+      "id": 2,
+      "status": "ok",
+      "name": "server2",
+      "latitude": "64%",
+      "longitude": "24%",
+      "users_id": [5, 6, 7, 8],
+      "uptime": "2011-10-05T14:48:00.000Z"
+    },
+    {
+      "id": 3,
+      "status": "ok",
+      "name": "server3",
+      "latitude": "53%",
+      "longitude": "20%",
+      "users_id": [9, 10, 11, 12],
+      "uptime": "2011-10-05T14:48:00.000Z"
+    },
+    {
+      "id": 4,
+      "status": "ok",
+      "name": "server4",
+      "latitude": "24%",
+      "longitude": "15%",
+      "users_id": [13, 14, 15, 16],
+      "uptime": "2011-10-05T14:48:00.000Z"
+    },
+    {
+      "id": 5,
+      "status": "ok",
+      "name": "server5",
+      "latitude": "24%",
+      "longitude": "64%",
+      "users_id": [17, 18, 19, 20],
+      "uptime": "2011-10-05T14:48:00.000Z"
+    },
+    {
+      "id": 6,
+      "status": "ok",
+      "name": "asd",
+      "latitude": "20%",
+      "longitude": "53%",
+      "users_id": [21, 22, 23, 24],
+      "uptime": "2011-10-05T14:48:00.000Z"
+    },
+    {
+      "id": 7,
+      "status": "ok",
+      "name": "zxc",
+      "latitude": "50%",
+      "longitude": "9%",
+      "users_id": [25, 26, 27, 28],
+      "uptime": "2011-10-05T14:48:00.000Z"
+    },
+    {
+      "id": 8,
+      "status": "ok",
+      "name": "qweqz",
+      "latitude": "18%",
+      "longitude": "29%",
+      "users_id": [29, 30, 31, 32],
+      "uptime": "2011-10-05T14:48:00.000Z"
+    },
+    {
+      "id": 9,
+      "status": "ok",
+      "name": "qwez",
+      "latitude": "85%",
+      "longitude": "71%",
+      "users_id": [33, 34, 35, 36],
+      "uptime": "2011-10-05T14:48:00.000Z"
+    },
+    {
+      "id": 10,
+      "status": "vbn",
+      "name": "rtyrty",
+      "latitude": "44%",
+      "longitude": "45%",
+      "users_id": [37, 38, 39, 40],
+      "uptime": "2011-10-05T14:48:00.000Z"
+    }
+  ],
   "posts": [
     { "id": 1, "title": "json-server", "author": "typicode" }
   ],

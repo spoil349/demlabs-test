@@ -1,9 +1,18 @@
 .text-h7 {
   font-size: 1.125rem !important;
+  line-height: 1.5rem !important;
 }
 
 .z-3 {
   z-index: 3;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .gray--border {

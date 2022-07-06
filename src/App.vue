@@ -27,6 +27,10 @@
   </v-app>
 </template>
 
+<style lang="scss">
+@import url("./styles/index.scss");
+</style>
+
 <script>
 import ServersMapDashboardBlock from "./components/ServersMapDashboardBlock.vue";
 export default {

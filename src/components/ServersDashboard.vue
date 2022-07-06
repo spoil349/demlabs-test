@@ -5,21 +5,29 @@
         Servers
         <span class="gray-main--text">(8 online of 10)</span>
       </p>
-      <div class="mb-4">
-        <ServersFilter />
-      </div>
+      <SearchFilter @input="filter" />
     </div>
-    <ServersTable />
+    <ServersTable :servers="filteredServers" />
   </div>
 </template>
 
 <script>
-import ServersFilter from "./ServersFilter.vue";
+import { mapActions, mapGetters } from "vuex";
+import SearchFilter from "./SearchFilter.vue";
 import ServersTable from "./ServersTable.vue";
 
 export default {
   name: "ServersDashboard",
-  components: { ServersFilter, ServersTable },
+  components: { SearchFilter, ServersTable },
+  computed: {
+    ...mapGetters(["filteredServers", "choosenServerId"]),
+  },
+  methods: {
+    ...mapActions(["setSearchingValue"]),
+    filter(value) {
+      this.setSearchingValue(value);
+    },
+  },
 };
 </script>
 

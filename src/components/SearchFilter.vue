@@ -1,11 +1,13 @@
 <template>
   <v-text-field
+    dense
     background-color="black-main"
     dark
     class="rounded-lg body-1"
     placeholder="Search AP"
     outlined
     hide-details
+    @input="$emit('input', $event)"
   >
     <v-icon slot="prepend-inner" color="gray-main">mdi-magnify</v-icon>
   </v-text-field>
@@ -13,7 +15,7 @@
 
 <script>
 export default {
-  name: "ServersFilter",
+  name: "SearchFilter",
 };
 </script>
 
