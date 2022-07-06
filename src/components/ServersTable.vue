@@ -10,7 +10,7 @@
   >
     <template v-slot:item="{ item }">
       <tr
-        @click="setChoosenServerId(server.id)"
+        @click="setChoosenServerId(item.id)"
         class="black-main-hover rounded-0"
       >
         <td class="rounded-0 gray--border">{{ item.name }}</td>
