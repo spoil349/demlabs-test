@@ -7,8 +7,13 @@
       "name": "server1",
       "latitude": "9%",
       "longitude": "9%",
-      "users_id": [1, 2, 3, 4],
-      "uptime": "2011-10-05T14:48:00.000Z"
+      "users_id": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "uptime": "2022-04-01T23:25:57.109Z"
     },
     {
       "id": 2,
@@ -17,8 +22,13 @@
       "name": "server2",
       "latitude": "64%",
       "longitude": "24%",
-      "users_id": [5, 6, 7, 8],
-      "uptime": "2011-10-05T14:48:00.000Z"
+      "users_id": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "uptime": "2022-05-15T23:25:57.109Z"
     },
     {
       "id": 3,
@@ -27,8 +37,13 @@
       "name": "server3",
       "latitude": "53%",
       "longitude": "20%",
-      "users_id": [9, 10, 11, 12],
-      "uptime": "2011-10-05T14:48:00.000Z"
+      "users_id": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "uptime": "2022-01-01T23:25:57.109Z"
     },
     {
       "id": 4,
@@ -37,8 +52,13 @@
       "name": "server4",
       "latitude": "24%",
       "longitude": "15%",
-      "users_id": [1, 2, 3, 4],
-      "uptime": "2011-10-05T14:48:00.000Z"
+      "users_id": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "uptime": "2022-06-06T23:25:57.109Z"
     },
     {
       "id": 5,
@@ -47,8 +67,13 @@
       "name": "server5",
       "latitude": "24%",
       "longitude": "64%",
-      "users_id": [5, 6, 7, 8],
-      "uptime": "2011-10-05T14:48:00.000Z"
+      "users_id": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "uptime": "2022-04-01T23:25:57.109Z"
     },
     {
       "id": 6,
@@ -57,8 +82,13 @@
       "name": "asd",
       "latitude": "20%",
       "longitude": "53%",
-      "users_id": [9, 10, 11, 12],
-      "uptime": "2011-10-05T14:48:00.000Z"
+      "users_id": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "uptime": "2022-05-15T23:25:57.109Z"
     },
     {
       "id": 7,
@@ -67,8 +97,13 @@
       "name": "zxc",
       "latitude": "50%",
       "longitude": "9%",
-      "users_id": [1, 2, 3, 4],
-      "uptime": "2011-10-05T14:48:00.000Z"
+      "users_id": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "uptime": "2021-10-05T14:48:00.000Z"
     },
     {
       "id": 8,
@@ -77,8 +112,13 @@
       "name": "qweqz",
       "latitude": "18%",
       "longitude": "29%",
-      "users_id": [5, 6, 7, 8],
-      "uptime": "2011-10-05T14:48:00.000Z"
+      "users_id": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "uptime": "2022-02-15T23:25:57.109Z"
     },
     {
       "id": 9,
@@ -87,8 +127,13 @@
       "name": "qwez",
       "latitude": "85%",
       "longitude": "71%",
-      "users_id": [9, 10, 11, 12],
-      "uptime": "2011-10-05T14:48:00.000Z"
+      "users_id": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "uptime": "2020-05-15T23:25:57.109Z"
     },
     {
       "id": 10,
@@ -97,8 +142,13 @@
       "name": "rtyrty",
       "latitude": "44%",
       "longitude": "45%",
-      "users_id": [1, 2, 3, 4],
-      "uptime": "2011-10-05T14:48:00.000Z"
+      "users_id": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "uptime": "2022-05-29T23:25:57.109Z"
     }
   ],
   "users": [
@@ -107,19 +157,43 @@
       "name": "Leanne Graham",
       "username": "Bret",
       "email": "Sincere@april.biz",
-      "licenses": [{"id": 1, "name": "Greenland-1"},{"id": 2, "name": "Ireland-2"}],
-      "last_seen": [{
-        "id": 1,
-        "gadget": "Samsung Galaxy A12",
-        "date": "2011-10-05T14:48:00.000Z"
-      }]
+      "licenses": [
+        {
+          "id": 1,
+          "name": "Greenland-1"
+        },
+        {
+          "id": 2,
+          "name": "Ireland-2"
+        }
+      ],
+      "last_seen": [
+        {
+          "id": 1,
+          "gadget": "Samsung Galaxy A12",
+          "date": "2011-10-05T14:48:00.000Z"
+        }
+      ]
     },
     {
       "id": 2,
       "name": "Ervin Howell",
       "username": "Antonette",
       "email": "Shanna@melissa.tv",
-      "licenses": [{"id": 1, "name": "England-3"}, {"id": 2, "name": "Greenland-4"}, {"id": 3, "name": "Ireland-1"}],
+      "licenses": [
+        {
+          "id": 1,
+          "name": "England-3"
+        },
+        {
+          "id": 2,
+          "name": "Greenland-4"
+        },
+        {
+          "id": 3,
+          "name": "Ireland-1"
+        }
+      ],
       "last_seen": [
         {
           "id": 2,
@@ -138,7 +212,16 @@
       "name": "Clementine Bauch",
       "username": "Samantha",
       "email": "Nathan@yesenia.net",
-      "licenses": [{"id": 1, "name": "Jerusalem-2"}, {"id": 2, "name": "Ireland-1"}],
+      "licenses": [
+        {
+          "id": 1,
+          "name": "Jerusalem-2"
+        },
+        {
+          "id": 2,
+          "name": "Ireland-1"
+        }
+      ],
       "last_seen": [
         {
           "id": 3,
@@ -162,108 +245,219 @@
       "name": "Patricia Lebsack",
       "username": "Karianne",
       "email": "Julianne.OConner@kory.org",
-      "licenses": [{"id": 1, "name": "Greenland-1"},{"id": 2, "name": "Ireland-2"}],
-      "last_seen": [{
-        "id": 4,
-        "gadget": "Samsung Galaxy A12",
-        "date": "2011-10-05T14:48:00.000Z"
-      }]
+      "licenses": [
+        {
+          "id": 1,
+          "name": "Greenland-1"
+        },
+        {
+          "id": 2,
+          "name": "Ireland-2"
+        }
+      ],
+      "last_seen": [
+        {
+          "id": 4,
+          "gadget": "Samsung Galaxy A12",
+          "date": "2011-10-05T14:48:00.000Z"
+        }
+      ]
     },
     {
       "id": 5,
       "name": "Chelsey Dietrich",
       "username": "Kamren",
       "email": "Lucio_Hettinger@annie.ca",
-      "licenses":  [{"id": 1, "name": "England-3"}, {"id": 2, "name": "Greenland-4"}, {"id": 3, "name": "Ireland-1"}],
-      "last_seen": [{
-        "id": 5,
-        "gadget": "Iphone 12PRO",
-        "date": "2011-10-05T14:48:00.000Z"
-      }]
+      "licenses": [
+        {
+          "id": 1,
+          "name": "England-3"
+        },
+        {
+          "id": 2,
+          "name": "Greenland-4"
+        },
+        {
+          "id": 3,
+          "name": "Ireland-1"
+        }
+      ],
+      "last_seen": [
+        {
+          "id": 5,
+          "gadget": "Iphone 12PRO",
+          "date": "2011-10-05T14:48:00.000Z"
+        }
+      ]
     },
     {
       "id": 6,
       "name": "Mrs. Dennis Schulist",
       "username": "Leopoldo_Corkery",
       "email": "Karley_Dach@jasper.info",
-      "licenses": [{"id": 1, "name": "Jerusalem-2"}, {"id": 2, "name": "Ireland-1"}],
-      "last_seen": [{
-        "id": 6,
-        "gadget": "Xiaomi mi9t",
-        "date": "2011-10-05T14:48:00.000Z"
-      }]
+      "licenses": [
+        {
+          "id": 1,
+          "name": "Jerusalem-2"
+        },
+        {
+          "id": 2,
+          "name": "Ireland-1"
+        }
+      ],
+      "last_seen": [
+        {
+          "id": 6,
+          "gadget": "Xiaomi mi9t",
+          "date": "2011-10-05T14:48:00.000Z"
+        }
+      ]
     },
     {
       "id": 7,
       "name": "Homer Simpson",
       "username": "Karianne",
       "email": "Julianne.OConner@kory.org",
-      "licenses": [{"id": 1, "name": "Greenland-1"},{"id": 2, "name": "Ireland-2"}],
-      "last_seen": [{
-        "id": 7,
-        "gadget": "Samsung Galaxy A12",
-        "date": "2011-10-05T14:48:00.000Z"
-      }]
+      "licenses": [
+        {
+          "id": 1,
+          "name": "Greenland-1"
+        },
+        {
+          "id": 2,
+          "name": "Ireland-2"
+        }
+      ],
+      "last_seen": [
+        {
+          "id": 7,
+          "gadget": "Samsung Galaxy A12",
+          "date": "2011-10-05T14:48:00.000Z"
+        }
+      ]
     },
     {
       "id": 8,
       "name": "Stan Smith",
       "username": "Kamren",
       "email": "Lucio_Hettinger@annie.ca",
-      "licenses": [{"id": 1, "name": "England-3"}, {"id": 2, "name": "Greenland-4"}, {"id": 3, "name": "Ireland-1"}],
-      "last_seen": [{
-        "id": 8,
-        "gadget": "Iphone 12PRO",
-        "date": "2011-10-05T14:48:00.000Z"
-      }]
+      "licenses": [
+        {
+          "id": 1,
+          "name": "England-3"
+        },
+        {
+          "id": 2,
+          "name": "Greenland-4"
+        },
+        {
+          "id": 3,
+          "name": "Ireland-1"
+        }
+      ],
+      "last_seen": [
+        {
+          "id": 8,
+          "gadget": "Iphone 12PRO",
+          "date": "2011-10-05T14:48:00.000Z"
+        }
+      ]
     },
     {
       "id": 9,
       "name": "Steve Smith",
       "username": "Leopoldo_Corkery",
       "email": "Karley_Dach@jasper.info",
-      "licenses": [{"id": 1, "name": "Jerusalem-2"}, {"id": 2, "name": "Ireland-1"}],
-      "last_seen": [{
-        "id": 9,
-        "gadget": "Xiaomi mi9t",
-        "date": "2011-10-05T14:48:00.000Z"
-      }]
+      "licenses": [
+        {
+          "id": 1,
+          "name": "Jerusalem-2"
+        },
+        {
+          "id": 2,
+          "name": "Ireland-1"
+        }
+      ],
+      "last_seen": [
+        {
+          "id": 9,
+          "gadget": "Xiaomi mi9t",
+          "date": "2011-10-05T14:48:00.000Z"
+        }
+      ]
     },
     {
       "id": 10,
       "name": "Rick Sanchez",
       "username": "Karianne",
       "email": "Julianne.OConner@kory.org",
-      "licenses": [{"id": 1, "name": "Greenland-1"},{"id": 2, "name": "Ireland-2"}],
-      "last_seen": [{
-        "id": 10,
-        "gadget": "Samsung Galaxy A12",
-        "date": "2011-10-05T14:48:00.000Z"
-      }]
+      "licenses": [
+        {
+          "id": 1,
+          "name": "Greenland-1"
+        },
+        {
+          "id": 2,
+          "name": "Ireland-2"
+        }
+      ],
+      "last_seen": [
+        {
+          "id": 10,
+          "gadget": "Samsung Galaxy A12",
+          "date": "2011-10-05T14:48:00.000Z"
+        }
+      ]
     },
     {
       "id": 11,
       "name": "Morty Smith",
       "username": "Kamren",
       "email": "Lucio_Hettinger@annie.ca",
-      "licenses": [{"id": 1, "name": "England-3"}, {"id": 2, "name": "Greenland-4"}, {"id": 3, "name": "Ireland-1"}],
-      "last_seen": [{
-        "id": 11,
-        "gadget": "Iphone 12PRO",
-        "date": "2011-10-05T14:48:00.000Z"
-      }]
+      "licenses": [
+        {
+          "id": 1,
+          "name": "England-3"
+        },
+        {
+          "id": 2,
+          "name": "Greenland-4"
+        },
+        {
+          "id": 3,
+          "name": "Ireland-1"
+        }
+      ],
+      "last_seen": [
+        {
+          "id": 11,
+          "gadget": "Iphone 12PRO",
+          "date": "2011-10-05T14:48:00.000Z"
+        }
+      ]
     },
     {
       "id": 12,
       "name": "Jerry Smith",
       "username": "Leopoldo_Corkery",
       "email": "Karley_Dach@jasper.info",
-      "licenses": [{"id": 1, "name": "Jerusalem-2"}, {"id": 2, "name": "Ireland-1"}],
-      "last_seen": [{
-        "id": 12,
-        "gadget": "Xiaomi mi9t",
-        "date": "2011-10-05T14:48:00.000Z"
-      }]
+      "licenses": [
+        {
+          "id": 1,
+          "name": "Jerusalem-2"
+        },
+        {
+          "id": 2,
+          "name": "Ireland-1"
+        }
+      ],
+      "last_seen": [
+        {
+          "id": 12,
+          "gadget": "Xiaomi mi9t",
+          "date": "2011-10-05T14:48:00.000Z"
+        }
+      ]
     }
   ]
 }

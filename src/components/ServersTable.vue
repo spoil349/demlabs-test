@@ -11,10 +11,12 @@
     <template v-slot:item="{ item }">
       <tr
         @click="changeChoosenServerHandler(item.id)"
-        class="black-main-hover rounded-0"
+        class="black-main-hover rounded-0 cursor-pointer"
       >
         <td class="rounded-0 gray--border">{{ item.name }}</td>
-        <td class="rounded-0 gray--border">{{ item.uptime }}</td>
+        <td class="rounded-0 gray--border">
+          {{ getTimeSinceUptime(item.uptime) }}
+        </td>
         <td class="rounded-0 gray--border">{{ item.users_id.length }}</td>
       </tr>
     </template>
@@ -72,6 +74,16 @@ export default {
       this.setChoosenServerId(id);
       this.setUsersSearchingValue("");
       this.setExpandedUserId(null);
+    },
+    getTimeSinceUptime(uptimeTime) {
+      console.log(uptimeTime);
+      const newDate = new Date();
+      const newDate2 = new Date(uptimeTime);
+      const diffTime = Math.abs(newDate - newDate2);
+      const diffTimeDate = new Date(diffTime);
+      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+      const timeSinceUptime = `${diffDays} days, ${diffTimeDate.getHours()}h:${diffTimeDate.getMinutes()}m:${diffTimeDate.getSeconds()} `;
+      return timeSinceUptime;
     },
   },
 };
