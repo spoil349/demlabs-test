@@ -57,5 +57,16 @@ export default {
     setExpandedUserId({ commit }, id) {
       commit("updateExpandedUserId", id);
     },
+    async editUser({ state, commit }, data) {
+      const res = await api.users.updateUser(data);
+      const newUsers = state.choosenServerUsers.map((user) => {
+        if (user.id === res.data.id) {
+          return res.data;
+        } else {
+          return user;
+        }
+      });
+      commit("updateChoosenServerUsers", newUsers);
+    },
   },
 };

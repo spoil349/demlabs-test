@@ -19,20 +19,31 @@
         class="black-main-hover rounded-0"
         @click="expandUserHandler(item.id)"
       >
-        <td class="rounded-0 gray--border">{{ item.name }}</td>
+        <td class="rounded-0 gray--border blue-main--text">{{ item.name }}</td>
 
         <td class="rounded-0 gray--border">{{ item.email }}</td>
 
-        <td v-if="item.licenses.length > 1" class="rounded-0 gray--border">
-          <div v-if="getExpandedUserId === item.id">
-            <p
+        <td
+          v-if="item.licenses.length > 1"
+          class="rounded-0 gray--border pe-10"
+        >
+          <div v-if="getExpandedUserId === item.id" class="d-flex flex-column">
+            <div
               v-for="(license, index) in item.licenses"
               :key="license.id"
-              class="ma-0"
+              class="d-flex align-center justify-space-between"
             >
-              License {{ numWords(index + 1) }} -
-              {{ license.name }}
-            </p>
+              <p class="ma-0">
+                License {{ numWords(index + 1) }} - {{ license.name }}
+              </p>
+              <v-btn
+                @click="deleteLicense(item, license.id)"
+                icon
+                color="white-main ma-0"
+              >
+                <v-icon>mdi-close-circle-outline</v-icon>
+              </v-btn>
+            </div>
           </div>
           <div v-else>
             <p class="ma-0">License one - {{ item.licenses[0].name }}</p>
@@ -105,14 +116,15 @@ export default {
         {
           text: "Licenses",
           value: "licenses",
+          width: "25%",
           class:
-            "black-lighter gray-main--text body-2 font-weight-regular elevation-0",
+            "black-lighter gray-main--text body-2 font-weight-regular elevation-0 pe-15",
         },
         {
           text: "Last seen",
           value: "last_seen",
           class:
-            "black-lighter gray-main--text body-2 font-weight-regular elevation-0",
+            "black-lighter gray-main--text body-2 font-weight-regular elevation-0 ml-5",
         },
       ],
     };
@@ -121,7 +133,7 @@ export default {
     ...mapGetters(["usersLoadingStatus", "getExpandedUserId"]),
   },
   methods: {
-    ...mapActions(["setExpandedUserId"]),
+    ...mapActions(["setExpandedUserId", "editUser"]),
     numWords(val) {
       const numToWord = require("num-words");
       return numToWord(val);
@@ -132,6 +144,13 @@ export default {
       } else {
         this.setExpandedUserId(null);
       }
+    },
+    deleteLicense(item, licenseId) {
+      const newItem = {
+        ...item,
+        licenses: item.licenses.filter((license) => license.id !== licenseId),
+      };
+      this.editUser({ id: item.id, user: newItem });
     },
   },
 };
