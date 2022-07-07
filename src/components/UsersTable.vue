@@ -19,7 +19,12 @@
         class="black-main-hover rounded-0"
         @click="expandUserHandler(item.id)"
       >
-        <td class="rounded-0 gray--border blue-main--text">{{ item.name }}</td>
+        <td
+          class="rounded-0 gray--border blue-main--text cursor-pointer"
+          @click.stop="openPopupHandler(item.id)"
+        >
+          {{ item.name }}
+        </td>
 
         <td class="rounded-0 gray--border">{{ item.email }}</td>
 
@@ -34,7 +39,7 @@
               class="d-flex align-center justify-space-between"
             >
               <p class="ma-0">
-                License {{ numWords(index + 1) }} - {{ license.name }}
+                License {{ numToWord(index + 1) }} - {{ license.name }}
               </p>
               <v-btn
                 @click="deleteLicense(item, license.id)"
@@ -86,6 +91,7 @@
 
 <script>
 import { mapActions, mapGetters } from "vuex";
+
 export default {
   name: "UsersTable",
   props: {
@@ -133,11 +139,7 @@ export default {
     ...mapGetters(["usersLoadingStatus", "getExpandedUserId"]),
   },
   methods: {
-    ...mapActions(["setExpandedUserId", "editUser"]),
-    numWords(val) {
-      const numToWord = require("num-words");
-      return numToWord(val);
-    },
+    ...mapActions(["setExpandedUserId", "editUser", "setEditableUser"]),
     expandUserHandler(id) {
       if (this.getExpandedUserId !== id) {
         this.setExpandedUserId(id);
@@ -151,6 +153,10 @@ export default {
         licenses: item.licenses.filter((license) => license.id !== licenseId),
       };
       this.editUser({ id: item.id, user: newItem });
+    },
+    openPopupHandler(userId) {
+      this.setEditableUser(userId);
+      this.$emit("openPopup");
     },
   },
 };

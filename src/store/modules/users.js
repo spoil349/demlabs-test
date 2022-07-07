@@ -6,6 +6,7 @@ export default {
     usersSearchingValue: "",
     usersLoading: false,
     expandedUserId: null,
+    editableUser: null,
   },
   getters: {
     allChoosenServerUsers(state) {
@@ -28,6 +29,9 @@ export default {
     getExpandedUserId(state) {
       return state.expandedUserId;
     },
+    getEditableUser(state) {
+      return state.editableUser;
+    },
   },
   mutations: {
     updateChoosenServerUsers(state, choosenServerUsers) {
@@ -42,6 +46,9 @@ export default {
     updateExpandedUserId(state, value) {
       state.expandedUserId = value;
     },
+    updateEditableUser(state, value) {
+      state.editableUser = value;
+    },
   },
   actions: {
     async fetchChoosenServerUsers({ commit }, choosenServerUsersIds) {
@@ -50,12 +57,6 @@ export default {
       const res = await api.users.getUsers(searchingString);
       commit("updateChoosenServerUsers", res.data);
       commit("updateUsersLoading", false);
-    },
-    setUsersSearchingValue({ commit }, value) {
-      commit("updateUsersSearchingValue", value.toLowerCase());
-    },
-    setExpandedUserId({ commit }, id) {
-      commit("updateExpandedUserId", id);
     },
     async editUser({ state, commit }, data) {
       const res = await api.users.updateUser(data);
@@ -67,6 +68,18 @@ export default {
         }
       });
       commit("updateChoosenServerUsers", newUsers);
+    },
+    setUsersSearchingValue({ commit }, value) {
+      commit("updateUsersSearchingValue", value.toLowerCase());
+    },
+    setExpandedUserId({ commit }, id) {
+      commit("updateExpandedUserId", id);
+    },
+    setEditableUser({ state, commit }, id) {
+      const editableUser = state.choosenServerUsers.find(
+        (user) => user.id === id
+      );
+      commit("updateEditableUser", editableUser);
     },
   },
 };

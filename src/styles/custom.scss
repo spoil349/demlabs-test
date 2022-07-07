@@ -19,13 +19,31 @@
   cursor: pointer;
 }
 
+.cursor-default {
+  cursor: default;
+}
+
+.pointer-events-0 {
+  pointer-events: none;
+}
+
 .gray--border {
   border-color: $gray !important;
+}
+
+.h-100p {
+  height: 100%;
 }
 
 .header-badge {
   width: 12px;
   height: 12px;
+}
+
+.dialog-right-top-position {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .v-navigation-drawer__border {

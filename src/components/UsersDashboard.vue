@@ -33,7 +33,15 @@
         />
       </div>
     </div>
-    <UsersTable :users="filteredChoosenServerUsers" />
+    <UsersTable
+      :users="filteredChoosenServerUsers"
+      @openPopup="openPopupHandler"
+    />
+    <UserDetailsPopup
+      v-model="showPopup"
+      :user="getEditableUser"
+      @input="closePopupHandler"
+    />
   </div>
 </template>
 
@@ -42,16 +50,23 @@ import { mapActions, mapGetters } from "vuex";
 import SearchFilter from "./SearchFilter.vue";
 import UsersTable from "./UsersTable.vue";
 import CardHeader from "./CardHeader.vue";
+import UserDetailsPopup from "./UserDetailsPopup.vue";
 
 export default {
   name: "UsersDashboard",
-  components: { SearchFilter, UsersTable, CardHeader },
+  components: { SearchFilter, UsersTable, CardHeader, UserDetailsPopup },
+  data() {
+    return {
+      showPopup: false,
+    };
+  },
   computed: {
     ...mapGetters([
       "filteredChoosenServerUsers",
       "choosenServer",
       "usersLoadingStatus",
       "getUsersSearchingValue",
+      "getEditableUser",
     ]),
     usersSearchingValue: {
       get() {
@@ -64,6 +79,12 @@ export default {
   },
   methods: {
     ...mapActions(["setUsersSearchingValue", "fetchChoosenServerUsers"]),
+    openPopupHandler() {
+      this.showPopup = true;
+    },
+    closePopupHandler() {
+      this.showPopup = false;
+    },
   },
   mounted() {
     this.fetchChoosenServerUsers(this.choosenServer.users_id);

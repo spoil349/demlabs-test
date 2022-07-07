@@ -6,6 +6,14 @@ import vuetify from "./plugins/vuetify";
 import ApiPlugin from "./plugins/api";
 
 Vue.use(ApiPlugin);
+Vue.mixin({
+  methods: {
+    numToWord(value) {
+      const numToWordFunc = require("num-words");
+      return numToWordFunc(value);
+    },
+  },
+});
 
 Vue.config.productionTip = false;
 
