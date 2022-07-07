@@ -76,7 +76,6 @@ export default {
       this.setExpandedUserId(null);
     },
     getTimeSinceUptime(uptimeTime) {
-      console.log(uptimeTime);
       const newDate = new Date();
       const newDate2 = new Date(uptimeTime);
       const diffTime = Math.abs(newDate - newDate2);

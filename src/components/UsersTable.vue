@@ -64,12 +64,13 @@
         <td v-if="item.last_seen.length > 1" class="rounded-0 gray--border">
           <div v-if="getExpandedUserId === item.id">
             <p v-for="visit in item.last_seen" :key="visit.id" class="ma-0">
-              {{ visit.gadget }} - {{ visit.date }}
+              {{ visit.gadget }} - {{ getDateString(visit.date) }}
             </p>
           </div>
           <div v-else>
             <p class="ma-0">
-              {{ item.last_seen[0].gadget }} - {{ item.last_seen[0].date }}
+              {{ item.last_seen[0].gadget }} -
+              {{ getDateString(item.last_seen[0].date) }}
             </p>
             <p class="ma-0 blue-main--text">
               {{ item.last_seen.length - 1 }} more
@@ -78,7 +79,8 @@
         </td>
         <td v-else class="rounded-0 gray--border">
           <p class="ma-0">
-            {{ item.last_seen[0].gadget }} - {{ item.last_seen[0].date }}
+            {{ item.last_seen[0].gadget }} -
+            {{ getDateString(item.last_seen[0].date) }}
           </p>
         </td>
       </tr>
@@ -91,6 +93,8 @@
 
 <script>
 import { mapActions, mapGetters } from "vuex";
+
+import MONTHS_NAMES from "@/constants/MONTHS_NAMES";
 
 export default {
   name: "UsersTable",
@@ -157,6 +161,12 @@ export default {
     openPopupHandler(userId) {
       this.setEditableUser(userId);
       this.$emit("openPopup");
+    },
+    getDateString(date) {
+      const dateInstance = new Date(date);
+      const monthName = MONTHS_NAMES[dateInstance.getMonth()];
+      const dateString = `${dateInstance.getDate()} ${monthName}, ${dateInstance.getHours()}:${dateInstance.getMinutes()}`;
+      return dateString;
     },
   },
 };
