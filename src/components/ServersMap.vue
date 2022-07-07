@@ -24,7 +24,9 @@ export default {
   props: {
     servers: {
       type: Array,
-      default: [],
+      default() {
+        return [];
+      },
     },
   },
 };

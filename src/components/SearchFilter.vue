@@ -1,10 +1,11 @@
 <template>
   <v-text-field
+    :value="value"
     dense
     background-color="black-main"
     dark
     class="rounded-lg body-1"
-    placeholder="Search AP"
+    :placeholder="placeholder"
     outlined
     hide-details
     @input="$emit('input', $event)"
@@ -16,6 +17,16 @@
 <script>
 export default {
   name: "SearchFilter",
+  props: {
+    value: {
+      type: String,
+      default: "",
+    },
+    placeholder: {
+      type: String,
+      default: "Type something...",
+    },
+  },
 };
 </script>
 

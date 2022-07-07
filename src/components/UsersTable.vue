@@ -1,21 +1,30 @@
 <template>
+  <div
+    v-if="usersLoadingStatus"
+    class="pa-6 d-flex justify-center align-center"
+  >
+    <v-progress-circular indeterminate color="white-main"></v-progress-circular>
+  </div>
   <v-data-table
+    v-else
     fixed-header
-    height="300px"
     disable-sort
     :headers="headers"
-    :items="servers"
+    :items="users"
     :hide-default-footer="true"
     class="rounded-0 black-lighter white-main--text custom-scroll"
   >
     <template v-slot:item="{ item }">
-      <tr
-        @click="changeChoosenServerHandler(item.id)"
-        class="black-main-hover rounded-0"
-      >
+      <tr class="black-main-hover rounded-0">
         <td class="rounded-0 gray--border">{{ item.name }}</td>
-        <td class="rounded-0 gray--border">{{ item.uptime }}</td>
-        <td class="rounded-0 gray--border">{{ item.users_id.length }}</td>
+        <td class="rounded-0 gray--border">{{ item.email }}</td>
+        <td class="rounded-0 gray--border">
+          <ul>
+            <li v-for="license in item.licenses" :key="license.id">
+              {{ license.name }}
+            </li>
+          </ul>
+        </td>
       </tr>
     </template>
     <template v-slot:no-data>
@@ -25,11 +34,11 @@
 </template>
 
 <script>
-import { mapActions } from "vuex";
+import { mapGetters } from "vuex";
 export default {
-  name: "ServersTable",
+  name: "UsersTable",
   props: {
-    servers: {
+    users: {
       type: Array,
       default() {
         return [];
@@ -62,12 +71,8 @@ export default {
       ],
     };
   },
-  methods: {
-    ...mapActions(["setChoosenServerId", "setUsersSearchingValue"]),
-    changeChoosenServerHandler(id) {
-      this.setChoosenServerId(id);
-      this.setUsersSearchingValue("");
-    },
+  computed: {
+    ...mapGetters(["usersLoadingStatus"]),
   },
 };
 </script>

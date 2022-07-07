@@ -3,6 +3,7 @@
     {
       "id": 1,
       "status": "ok",
+      "status_text": "Server is on",
       "name": "server1",
       "latitude": "9%",
       "longitude": "9%",
@@ -11,7 +12,8 @@
     },
     {
       "id": 2,
-      "status": "ok",
+      "status": "attacked",
+      "status_text": "Numerous problems or likely under active attack",
       "name": "server2",
       "latitude": "64%",
       "longitude": "24%",
@@ -20,7 +22,8 @@
     },
     {
       "id": 3,
-      "status": "ok",
+      "status": "disconnected",
+      "status_text": "Server is disconnected",
       "name": "server3",
       "latitude": "53%",
       "longitude": "20%",
@@ -30,72 +33,206 @@
     {
       "id": 4,
       "status": "ok",
+      "status_text": "Server is on",
       "name": "server4",
       "latitude": "24%",
       "longitude": "15%",
-      "users_id": [13, 14, 15, 16],
+      "users_id": [1, 2, 3, 4],
       "uptime": "2011-10-05T14:48:00.000Z"
     },
     {
       "id": 5,
-      "status": "ok",
+      "status": "attacked",
+      "status_text": "Numerous problems or likely under active attack",
       "name": "server5",
       "latitude": "24%",
       "longitude": "64%",
-      "users_id": [17, 18, 19, 20],
+      "users_id": [5, 6, 7, 8],
       "uptime": "2011-10-05T14:48:00.000Z"
     },
     {
       "id": 6,
-      "status": "ok",
+      "status": "disconnected",
+      "status_text": "Server is disconnected",
       "name": "asd",
       "latitude": "20%",
       "longitude": "53%",
-      "users_id": [21, 22, 23, 24],
+      "users_id": [9, 10, 11, 12],
       "uptime": "2011-10-05T14:48:00.000Z"
     },
     {
       "id": 7,
       "status": "ok",
+      "status_text": "Server is on",
       "name": "zxc",
       "latitude": "50%",
       "longitude": "9%",
-      "users_id": [25, 26, 27, 28],
+      "users_id": [1, 2, 3, 4],
       "uptime": "2011-10-05T14:48:00.000Z"
     },
     {
       "id": 8,
-      "status": "ok",
+      "status": "attacked",
+      "status_text": "Numerous problems or likely under active attack",
       "name": "qweqz",
       "latitude": "18%",
       "longitude": "29%",
-      "users_id": [29, 30, 31, 32],
+      "users_id": [5, 6, 7, 8],
       "uptime": "2011-10-05T14:48:00.000Z"
     },
     {
       "id": 9,
-      "status": "ok",
+      "status": "disconnected",
+      "status_text": "Server is disconnected",
       "name": "qwez",
       "latitude": "85%",
       "longitude": "71%",
-      "users_id": [33, 34, 35, 36],
+      "users_id": [9, 10, 11, 12],
       "uptime": "2011-10-05T14:48:00.000Z"
     },
     {
       "id": 10,
-      "status": "vbn",
+      "status": "ok",
+      "status_text": "Server is on",
       "name": "rtyrty",
       "latitude": "44%",
       "longitude": "45%",
-      "users_id": [37, 38, 39, 40],
+      "users_id": [1, 2, 3, 4],
       "uptime": "2011-10-05T14:48:00.000Z"
     }
   ],
-  "posts": [
-    { "id": 1, "title": "json-server", "author": "typicode" }
-  ],
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 }
-  ],
-  "profile": { "name": "typicode" }
+  "users": [
+    {
+      "id": 1,
+      "name": "Leanne Graham",
+      "username": "Bret",
+      "email": "Sincere@april.biz",
+      "licences": [{"id": 1, "name": "Greenland-1"},{"id": 2, "name": "Ireland-2"}],
+      "last_seen": [{
+        "gadget": "Samsung Galaxy A12",
+        "date": "2011-10-05T14:48:00.000Z"
+      }]
+    },
+    {
+      "id": 2,
+      "name": "Ervin Howell",
+      "username": "Antonette",
+      "email": "Shanna@melissa.tv",
+      "licences": [{"id": 1, "name": "England-3"}, {"id": 2, "name": "Greenland-4"}, {"id": 3, "name": "Ireland-1"}],
+      "last_seen": [{
+        "gadget": "Xiaomi mi9t",
+        "date": "2011-10-05T14:48:00.000Z"
+      }]
+    },
+    {
+      "id": 3,
+      "name": "Clementine Bauch",
+      "username": "Samantha",
+      "email": "Nathan@yesenia.net",
+      "licences": [{"id": 1, "name": "Jerusalem-2"}, {"id": 2, "name": "Ireland-1"}],
+      "last_seen": [{
+        "gadget": "Iphone 12PRO",
+        "date": "2011-10-05T14:48:00.000Z"
+      }]
+    },
+    {
+      "id": 4,
+      "name": "Patricia Lebsack",
+      "username": "Karianne",
+      "email": "Julianne.OConner@kory.org",
+      "licences": [{"id": 1, "name": "Greenland-1"},{"id": 2, "name": "Ireland-2"}],
+      "last_seen": [{
+        "gadget": "Samsung Galaxy A12",
+        "date": "2011-10-05T14:48:00.000Z"
+      }]
+    },
+    {
+      "id": 5,
+      "name": "Chelsey Dietrich",
+      "username": "Kamren",
+      "email": "Lucio_Hettinger@annie.ca",
+      "licences":  [{"id": 1, "name": "England-3"}, {"id": 2, "name": "Greenland-4"}, {"id": 3, "name": "Ireland-1"}],
+      "last_seen": [{
+        "gadget": "Iphone 12PRO",
+        "date": "2011-10-05T14:48:00.000Z"
+      }]
+    },
+    {
+      "id": 6,
+      "name": "Mrs. Dennis Schulist",
+      "username": "Leopoldo_Corkery",
+      "email": "Karley_Dach@jasper.info",
+      "licences": [{"id": 1, "name": "Jerusalem-2"}, {"id": 2, "name": "Ireland-1"}],
+      "last_seen": [{
+        "gadget": "Xiaomi mi9t",
+        "date": "2011-10-05T14:48:00.000Z"
+      }]
+    },
+    {
+      "id": 7,
+      "name": "Homer Simpson",
+      "username": "Karianne",
+      "email": "Julianne.OConner@kory.org",
+      "licences": [{"id": 1, "name": "Greenland-1"},{"id": 2, "name": "Ireland-2"}],
+      "last_seen": [{
+        "gadget": "Samsung Galaxy A12",
+        "date": "2011-10-05T14:48:00.000Z"
+      }]
+    },
+    {
+      "id": 8,
+      "name": "Stan Smith",
+      "username": "Kamren",
+      "email": "Lucio_Hettinger@annie.ca",
+      "licences": [{"id": 1, "name": "England-3"}, {"id": 2, "name": "Greenland-4"}, {"id": 3, "name": "Ireland-1"}],
+      "last_seen": [{
+        "gadget": "Iphone 12PRO",
+        "date": "2011-10-05T14:48:00.000Z"
+      }]
+    },
+    {
+      "id": 9,
+      "name": "Steve Smith",
+      "username": "Leopoldo_Corkery",
+      "email": "Karley_Dach@jasper.info",
+      "licences": [{"id": 1, "name": "Jerusalem-2"}, {"id": 2, "name": "Ireland-1"}],
+      "last_seen": [{
+        "gadget": "Xiaomi mi9t",
+        "date": "2011-10-05T14:48:00.000Z"
+      }]
+    },
+    {
+      "id": 10,
+      "name": "Rick Sanchez",
+      "username": "Karianne",
+      "email": "Julianne.OConner@kory.org",
+      "licences": [{"id": 1, "name": "Greenland-1"},{"id": 2, "name": "Ireland-2"}],
+      "last_seen": [{
+        "gadget": "Samsung Galaxy A12",
+        "date": "2011-10-05T14:48:00.000Z"
+      }]
+    },
+    {
+      "id": 11,
+      "name": "Morty Smith",
+      "username": "Kamren",
+      "email": "Lucio_Hettinger@annie.ca",
+      "licences": [{"id": 1, "name": "England-3"}, {"id": 2, "name": "Greenland-4"}, {"id": 3, "name": "Ireland-1"}],
+      "last_seen": [{
+        "gadget": "Iphone 12PRO",
+        "date": "2011-10-05T14:48:00.000Z"
+      }]
+    },
+    {
+      "id": 12,
+      "name": "Jerry Smith",
+      "username": "Leopoldo_Corkery",
+      "email": "Karley_Dach@jasper.info",
+      "licences": [{"id": 1, "name": "Jerusalem-2"}, {"id": 2, "name": "Ireland-1"}],
+      "last_seen": [{
+        "gadget": "Xiaomi mi9t",
+        "date": "2011-10-05T14:48:00.000Z"
+      }]
+    }
+  ]
 }

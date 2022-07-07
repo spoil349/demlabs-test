@@ -20,7 +20,12 @@
       <div class="d-flex flex-column flex-grow-1">
         <v-app-bar flat color="black-lighter" class="flex-grow-0"></v-app-bar>
         <v-main class="px-6 py-4">
-          <ServersMapDashboardBlock />
+          <div class="mb-4">
+            <ServersMapDashboardBlock />
+          </div>
+          <div>
+            <ServerConnectionsBlock />
+          </div>
         </v-main>
       </div>
     </div>
@@ -33,10 +38,12 @@
 
 <script>
 import ServersMapDashboardBlock from "./components/ServersMapDashboardBlock.vue";
+import ServerConnectionsBlock from "./components/ServerConnectionsBlock.vue";
+
 export default {
   name: "App",
 
-  components: { ServersMapDashboardBlock },
+  components: { ServersMapDashboardBlock, ServerConnectionsBlock },
 
   data: () => ({
     //

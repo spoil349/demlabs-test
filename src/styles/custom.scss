@@ -3,6 +3,10 @@
   line-height: 1.5rem !important;
 }
 
+.text-medium {
+  font-size: 1.375rem !important;
+}
+
 .z-3 {
   z-index: 3;
 }
@@ -17,6 +21,11 @@
 
 .gray--border {
   border-color: $gray !important;
+}
+
+.header-badge {
+  width: 12px;
+  height: 12px;
 }
 
 .v-navigation-drawer__border {
