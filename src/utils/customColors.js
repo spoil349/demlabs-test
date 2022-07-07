@@ -10,12 +10,15 @@ const white = Object.freeze({
 });
 const red = Object.freeze({
   main: "#F55151",
+  darker: "#C44040",
 });
 const yellow = Object.freeze({
   main: "#FFFB95",
+  darker: "#CCC877",
 });
 const green = Object.freeze({
   main: "#87FF85",
+  darker: "#6CCC6A",
 });
 const blue = Object.freeze({
   main: "#3B59F9",

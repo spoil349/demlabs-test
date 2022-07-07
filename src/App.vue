@@ -44,9 +44,5 @@ export default {
   name: "App",
 
   components: { ServersMapDashboardBlock, ServerConnectionsBlock },
-
-  data: () => ({
-    //
-  }),
 };
 </script>

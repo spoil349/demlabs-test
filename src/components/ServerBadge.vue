@@ -4,9 +4,6 @@
     :style="{
       border: '6px solid rgba(255, 255, 255, 0.12)',
       borderRadius: '100%',
-      position: 'absolute',
-      top: server.longitude,
-      left: server.latitude,
     }"
     @click="setChoosenServerId(server.id)"
   >
@@ -29,10 +26,8 @@ export default {
   props: {
     server: {
       type: Object,
-      default: {
-        id: 1,
-        latitude: "0",
-        longitude: "0",
+      default() {
+        return {};
       },
     },
   },
