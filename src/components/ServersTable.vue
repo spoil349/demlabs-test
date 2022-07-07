@@ -63,10 +63,15 @@ export default {
     };
   },
   methods: {
-    ...mapActions(["setChoosenServerId", "setUsersSearchingValue"]),
+    ...mapActions([
+      "setChoosenServerId",
+      "setUsersSearchingValue",
+      "setExpandedUserId",
+    ]),
     changeChoosenServerHandler(id) {
       this.setChoosenServerId(id);
       this.setUsersSearchingValue("");
+      this.setExpandedUserId(null);
     },
   },
 };

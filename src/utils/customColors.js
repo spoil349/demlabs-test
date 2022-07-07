@@ -17,6 +17,9 @@ const yellow = Object.freeze({
 const green = Object.freeze({
   main: "#87FF85",
 });
+const blue = Object.freeze({
+  main: "#3B59F9",
+});
 export default Object.freeze({
   black,
   gray,
@@ -24,4 +27,5 @@ export default Object.freeze({
   red,
   yellow,
   green,
+  blue,
 });

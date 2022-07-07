@@ -16,6 +16,7 @@ export default new Vuetify({
         "red-main": customColor.red.main,
         "yellow-main": customColor.yellow.main,
         "green-main": customColor.green.main,
+        "blue-main": customColor.blue.main,
       },
       dark: {
         white: customColor.white.main,

@@ -5,6 +5,7 @@ export default {
     choosenServerUsers: [],
     usersSearchingValue: "",
     usersLoading: false,
+    expandedUserId: null,
   },
   getters: {
     allChoosenServerUsers(state) {
@@ -21,6 +22,12 @@ export default {
     getUsersSearchingValue(state) {
       return state.usersSearchingValue;
     },
+    getUsersSearchingValue(state) {
+      return state.usersSearchingValue;
+    },
+    getExpandedUserId(state) {
+      return state.expandedUserId;
+    },
   },
   mutations: {
     updateChoosenServerUsers(state, choosenServerUsers) {
@@ -31,6 +38,9 @@ export default {
     },
     updateUsersLoading(state, value) {
       state.usersLoading = value;
+    },
+    updateExpandedUserId(state, value) {
+      state.expandedUserId = value;
     },
   },
   actions: {
@@ -43,6 +53,9 @@ export default {
     },
     setUsersSearchingValue({ commit }, value) {
       commit("updateUsersSearchingValue", value.toLowerCase());
+    },
+    setExpandedUserId({ commit }, id) {
+      commit("updateExpandedUserId", id);
     },
   },
 };
