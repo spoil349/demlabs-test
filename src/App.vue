@@ -1,52 +1,48 @@
 <template>
-  <v-app>
-    <v-app-bar app color="primary" dark>
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
+  <v-app id="main">
+    <div class="d-flex flex-row flex-grow-1">
+      <v-navigation-drawer
+        permanent
+        width="320"
+        color="black-lighter px-8 pt-6 pb-11"
+        class="justify-space-between"
       >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
-
-    <v-main> </v-main>
+        <p class="white-main--text font-weight-medium display-1 mb-auto">
+          Logo
+        </p>
+        <template v-slot:append>
+          <v-btn text class="white-main--text text-none subtitle-2">
+            <v-icon left class="me-3"> mdi-login-variant </v-icon>
+            Log out
+          </v-btn>
+        </template>
+      </v-navigation-drawer>
+      <div class="d-flex flex-column flex-grow-1">
+        <v-app-bar flat color="black-lighter" class="flex-grow-0"></v-app-bar>
+        <v-main class="px-6 py-4">
+          <div class="mb-4">
+            <ServersMapDashboardBlock />
+          </div>
+          <div>
+            <ServerConnectionsBlock />
+          </div>
+        </v-main>
+      </div>
+    </div>
   </v-app>
 </template>
 
+<style lang="scss">
+@import url("./styles/index.scss");
+</style>
+
 <script>
+import ServersMapDashboardBlock from "./components/ServersMapDashboardBlock.vue";
+import ServerConnectionsBlock from "./components/ServerConnectionsBlock.vue";
+
 export default {
   name: "App",
 
-  components: {
-    HelloWorld,
-  },
-
-  data: () => ({
-    //
-  }),
+  components: { ServersMapDashboardBlock, ServerConnectionsBlock },
 };
 </script>
