@@ -7,13 +7,11 @@ npm install
 
 ### Compiles and hot-reloads for development
 ```
-npm run serve
+npm run dev
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Requirements
+1. Должна отображаться карта с VPN-серверами. У каждого из них должен быть цветовой индикатор статуса.
+2. При наведении на точку выводится информация о статусе сервера и количестве соединений.
+3. При клике на точку (по карте или из списка), в таблице отображается имя сервера, его статус (текстом) и его пользователи.
+4. При клике по имени пользователя, должны появляться данные о нем, которые можно редактировать и сохранить изменения.
