@@ -13,7 +13,12 @@
         @click="changeChoosenServerHandler(item.id)"
         class="black-main-hover rounded-0 cursor-pointer"
       >
-        <td class="rounded-0 gray--border">{{ item.name }}</td>
+        <td class="rounded-0 gray--border">
+          <div class="d-flex align-center">
+            <ServerStatusBadge :color="item.server_status_color" />
+            <span>{{ item.name }}</span>
+          </div>
+        </td>
         <td class="rounded-0 gray--border">
           {{ getTimeSinceUptime(item.uptime) }}
         </td>
@@ -28,8 +33,12 @@
 
 <script>
 import { mapActions } from "vuex";
+
+import ServerStatusBadge from "./ServerStatusBadge.vue";
+
 export default {
   name: "ServersTable",
+  components: { ServerStatusBadge },
   props: {
     servers: {
       type: Array,
